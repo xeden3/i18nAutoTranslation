@@ -32,6 +32,9 @@ namespace I18nAutoTranslation
             
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                // 删除之前可能载入的数据
+                listInventoryData.Items.Clear();
+                
                 string file = dialog.FileName;
                 // MessageBox.Show(file);
                 _json_obj = open_json_file(file);
